@@ -38,11 +38,11 @@ const SavedShows = () => {
 
   return (
     <>
-      {/* <h2 className='p-4 font-bold text-white md:text-xl'>My Shows</h2> */}
+      <h2 className='p-4 font-bold text-white md:text-xl'>My favorite movies</h2>
       <div className='relative flex items-center group'>
         <MdChevronLeft
           onClick={slideLeft}
-          className='absolute left-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
+          className='absolute left-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block hover:bg-red-600'
           size={40}
         />
         <div
@@ -55,7 +55,7 @@ const SavedShows = () => {
               className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'
             >
               <img
-                className='block w-full h-auto'
+                className='block w-full h-[250px]'
                 src={`https://image.tmdb.org/t/p/w500/${item?.img}`}
                 alt={item?.title}
               />
@@ -70,7 +70,7 @@ const SavedShows = () => {
         </div>
         <MdChevronRight
           onClick={slideRight}
-          className='absolute right-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
+          className='absolute right-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block hover:bg-red-600'
           size={40}
         />
       </div>

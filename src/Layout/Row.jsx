@@ -5,7 +5,6 @@ import Movie from './Movie';
 
 const Row = ({ title, fetchURL, rowID }) => {
     const [movies, setMovies] = useState([]);
-    // const [trailerUrl, setTrailerUrl] = useState("");
 
     useEffect(() => {
       axios.get(fetchURL).then((response) => {
@@ -29,7 +28,7 @@ const Row = ({ title, fetchURL, rowID }) => {
       <div className='relative flex items-center group'>
         <MdChevronLeft
           onClick={slideLeft}
-          className='absolute left-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
+          className='absolute left-0 z-10 hidden bg-red-600 rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
           size={40}
         />
         <div
@@ -42,7 +41,7 @@ const Row = ({ title, fetchURL, rowID }) => {
         </div>
         <MdChevronRight
           onClick={slideRight}
-          className='absolute right-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
+          className='absolute right-0 z-10 hidden bg-red-600 rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block'
           size={40}
         />
       </div>

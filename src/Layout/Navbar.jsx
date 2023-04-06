@@ -5,7 +5,6 @@ import User from '../assets/User_icon_2.svg.png'
 const Navbar = () => {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
-  // console.log(user.email)
 
   const handleLogout = async () => {
     try {

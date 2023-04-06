@@ -7,6 +7,8 @@ import Login from './Pages/login';
 import Signup from './Pages/SignUp';
 import Account from './Pages/Account';
 import ProtectedRoute from './Layout/ProtectedRoute';
+import 'react-toastify/dist/ReactToastify.css'
+import {ToastContainer, toast} from 'react-toastify'
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         </>
         <Footer />
       </AuthContextProvider>
+      <ToastContainer />
     </>
   );
 }

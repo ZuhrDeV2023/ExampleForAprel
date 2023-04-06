@@ -3,7 +3,6 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { UserAuth } from '../context/AuthContext';
 import { db } from '../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
 
 const Movie = ({ item }) => {
   const [like, setLike] = useState(false);
@@ -11,7 +10,6 @@ const Movie = ({ item }) => {
   const { user } = UserAuth();
   
   const movieID = doc(db, 'users', `${user?.email}`);
-  // console.log(movieID);
   
   const saveShow = async () => {
     if (user?.email) {
@@ -28,7 +26,6 @@ const Movie = ({ item }) => {
       alert('Please log in to save a movie');
     }
   };
-  // console.log(saveShow());
   return (
     <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
       <img
